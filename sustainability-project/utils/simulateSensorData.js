@@ -1,7 +1,7 @@
 const mqtt = require('mqtt');
 
 // MQTT broker URL
-const brokerUrl = 'mqtt://broker.hivemq.com'; // Replace with your broker URL
+const brokerUrl = 'mqtt://localhost:1883'; // Replace with your broker URL
 
 // Create an MQTT client
 const client = mqtt.connect(brokerUrl);
@@ -22,7 +22,14 @@ client.on('connect', () => {
             // Disconnect the client
             client.end();
         });
-    }, 1000);
+    }, 5000);
+
+    // const message = JSON.stringify({ "waterFlow": Math.random() * 100, currentFlow: Math.random() * 10, temperature: Math.random() * 30 });
+    // client.publish(topic, message, { qos: 0, retain: false }, () => {
+    //     console.log(`Message published to topic '${topic}': ${message}`);
+    //     // Disconnect the client
+    //     client.end();
+    // });
 });
 
 // Handle connection errors

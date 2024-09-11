@@ -25,7 +25,7 @@ export default function Home() {
         };
 
         fetchData();
-        const interval = setInterval(fetchData, 5000);
+        const interval = setInterval(fetchData, 6000);
 
         return () => clearInterval(interval);
     }, []);

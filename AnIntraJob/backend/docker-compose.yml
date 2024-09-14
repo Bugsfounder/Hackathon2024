@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_interJob
+    ports:
+      - "27017:27017"  # Expose MongoDB port to the local machine
+    volumes:
+      - E:\Hackathon\Hackathon2024\internJobWeb\db_data:/data/db  # Saving DB Data To Working Dir So Team Members can work properly
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=bugsfounder  # Set MongoDB root username
+      - MONGO_INITDB_ROOT_PASSWORD=kubari  # Set MongoDB root password
+

@@ -6,15 +6,15 @@ import DOMPurify from 'dompurify'
 import hljs from "highlight.js"
 import 'highlight.js/styles/monokai.css';
 
-const Blog = () => {
+const Job = () => {
     const { publicAxiosInstance } = useOutletContext()
-    let { blog_url } = useParams();
+    let { job_url } = useParams();
     const [blog, setBlog] = useState({});
     const [readingTime, setReadingTime] = useState(0)
     const [htmlContent, setHtmlContent] = useState('')
 
     const getBlog = () => {
-        publicAxiosInstance.get(`/blog/${blog_url}`)
+        publicAxiosInstance.get(`/blog/${job_url}`)
             .then(response => {
                 setBlog(response.data)
                 setReadingTime(calculateReadingTime(response.data.content.split(" ").length))
@@ -60,4 +60,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default Job

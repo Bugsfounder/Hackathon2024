@@ -7,8 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './Pages/ErrorPage';
 import Home from './Pages/MainWebPages/HomePage';
 import AboutPage from './Pages/MainWebPages/AboutPage';
-import BlogsPage from './Pages/MainWebPages/BlogsPage';
-import BlogPage from './Pages/MainWebPages/BlogPage';
+import JobsPage from './Pages/MainWebPages/JobsPage';
+import JobPage from './Pages/MainWebPages/JobPage';
 import TutorialsPage from './Pages/MainWebPages/TutorialsPage';
 import TutorialPage from './Pages/MainWebPages/TutorialPage';
 import SignupPage from './Pages/AuthPages/SignupPage';
@@ -39,16 +39,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/about_me",
+        path: "/internship",
         element: <AboutPage />
       },
       {
-        path: "/blogs",
-        element: <BlogsPage />
+        path: "/jobs",
+        element: <JobsPage />
       },
       {
-        path: "/blogs/:blog_url",
-        element: <BlogPage />
+        path: "/jobs/:job_url",
+        element: <JobPage />
       },
       {
         path: "/tutorials",

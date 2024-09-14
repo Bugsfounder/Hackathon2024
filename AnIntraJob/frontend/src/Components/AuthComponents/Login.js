@@ -42,10 +42,7 @@ const Login = () => {
     return (
         <section className="bg-gray-50 dark:bg-gray-900 mt-[132.5px]">
             <div className="flex flex-col items-center justify-center md:px-4 md:py-20 py-8 mx-auto my-10">
-                <Link to="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img className="w-8 h-8 mr-2" src={Logo} alt="logo" />
-                    Bugs<span className='text-sky-600'>Founder</span>
-                </Link>
+                <Link to="/"><span className='flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white' id="aboutLogo"> <span className='text-orange-400'>An</span><span className='text-slate-400'>Intra</span><span className='text-green-600'>Job</span></span></Link>
                 <div className="w-full bg-white rounded-[10px] shadow-md shadow-slate-300 dark:shadow-lg dark:shadow-slate-950 dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-slate-800">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">

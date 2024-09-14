@@ -26,7 +26,7 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
                     <div className="sidebarContent overflow-auto h-[500px]">
                         <div className="navItems mt-4 md:block md:mt-5">
                             <ul className="space-y-2 font-bold">
-                                <li><Link className="dark:hover:text-slate-400 md:text-lg" to="/kubari/admin/blogs">Blogs</Link></li>
+                                <li><Link className="dark:hover:text-slate-400 md:text-lg" to="/kubari/admin/blogs">Jobs</Link></li>
                                 <li><Link className="dark:hover:text-slate-400 md:text-lg" to="/kubari/admin/tutorials">Tutorials</Link></li>
                                 <li><Link className="dark:hover:text-slate-400 md:text-lg" to="/kubari/admin/users">Users</Link></li>
                                 <li><Link className="dark:hover:text-slate-400 md:text-lg" to="/kubari/admin/admins">Admins</Link></li>

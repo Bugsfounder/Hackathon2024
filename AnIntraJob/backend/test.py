@@ -39,7 +39,7 @@ def test_get_all_blogs():
 
 
 def test_get_blog_by_id(blog_id):
-    url = f"{BASE_URL}/blogs/{blog_id}"
+    url = f"{BASE_URL}/jobs/{blog_id}"
     response = requests.get(url)
     print("Get Blog By ID:", response.status_code, response.json())
 

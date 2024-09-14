@@ -41,7 +41,7 @@ const AdminEditBlog = () => {
             const response = await privateAxiosInstance.put(`/blog/${blog_url}`, newBlog, config);
             // console.log("form submit....", response.data.updated_fields.url);
             NotificationManager.success("Blog Updated Successfully!")
-            navigate(`/blogs/${response.data.updated_fields.url}`)
+            navigate(`/jobs/${response.data.updated_fields.url}`)
         } catch (err) {
             if (err.response) {
                 NotificationManager.error(`Data: ${err.response.data}\nStatus: ${err.response.status}\nHeaders: ${err.response.headers}`)

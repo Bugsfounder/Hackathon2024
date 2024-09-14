@@ -63,7 +63,7 @@ const AdminBlogs = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-center text-2xl font-semibold">Manipulate Blogs</h1>
+      <h1 className="text-center text-2xl font-semibold">Manipulate Jobs</h1>
       <div className='px-4 flex justify-end'>
         <Link to="add">
           <PlusCircleIcon className="size-10 text-slate-600 hover:text-slate-700 cursor-pointer " />
@@ -80,7 +80,7 @@ const AdminBlogs = () => {
           {blogs.map(blog => (
             <div key={blog.url} className="p-5 dark:text-white dark:bg-slate-800 bg-gray-100 my-3 shadow-sm rounded-md md:flex md:justify-between">
               <div className="contentDir">
-                <Link to={`/blogs/${blog.url}`} className="text-sky-600 text-xl">
+                <Link to={`/jobs/${blog.url}`} className="text-sky-600 text-xl">
                   <h1>{blog.title}</h1>
                 </Link>
                 <p className='text-sm mb-3'>{blog.author} . <span className='text-slate-400'>{formatDate(blog.created_at)} </span></p>

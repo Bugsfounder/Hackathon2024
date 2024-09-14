@@ -3,7 +3,7 @@ import { Link, useOutletContext } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { NotificationManager } from 'react-notifications';
 import formatDate from '../utils/Utility';
-const Blogs = () => {
+const Jobs = () => {
     const { publicAxiosInstance } = useOutletContext();
     const [blogs, setBlogs] = useState([]);
     const [page, setPage] = useState(1);
@@ -14,7 +14,7 @@ const Blogs = () => {
             .then(response => {
                 if (response.data.blogs && response.data.blogs.length > 0) {
                     setBlogs(prevBlogs => {
-                        const newBlogs = response.data.blogs.filter(blog => !prevBlogs.some(b => b.url === blog.url));
+                        const newBlogs = response.data.blogs.filter(job => !prevBlogs.some(b => b.url === job.url));
                         console.log(response.data.blogs)
                         return [...prevBlogs, ...newBlogs];
                     });
@@ -52,18 +52,18 @@ const Blogs = () => {
                     endMessage={<p className="text-center font-bold">No more jobs</p>}
                 >
                     <div className="blogSection py-3">
-                        {blogs.map(blog => (
-                            <div key={blog.url} className="p-5 dark:text-white dark:bg-slate-800 bg-gray-100 my-3 shadow-sm rounded-md md:flex md:justify-between" >
+                        {blogs.map(job => (
+                            <div key={job.url} className="p-5 dark:text-white dark:bg-slate-800 bg-gray-100 my-3 shadow-sm rounded-md md:flex md:justify-between" >
                                 <div className="contentDir">
-                                    <Link to={`/blogs/${blog.url}`} className="text-sky-600 text-xl">
-                                        <h1>{blog.title}</h1>
+                                    <Link to={`/jobs/${job.url}`} className="text-sky-600 text-xl">
+                                        <h1>{job.title}</h1>
                                     </Link>
-                                    <p className='text-sm mb-3 text-slate-400'>{blog.author}
-                                        {/* . <span className='text-slate-400'>{formatDate(blog.updated_at)} </span> */}
+                                    <p className='text-sm mb-3 text-slate-400'>{job.author}
+                                        {/* . <span className='text-slate-400'>{formatDate(job.updated_at)} </span> */}
                                     </p>
                                     <p className='text-sm flex flex-wrap  space-y-2 items-center'>
                                         <span></span>
-                                        {blog.tags.slice(0, 10).map(tag => (<p className='dark:bg-slate-700 bg-slate-300 p-1 mr-2  dark:text-slate-300 rounded-[10px] '>{tag}</p>))}
+                                        {job.tags.slice(0, 10).map(tag => (<p className='dark:bg-slate-700 bg-slate-300 p-1 mr-2  dark:text-slate-300 rounded-[10px] '>{tag}</p>))}
                                     </p>
                                 </div>
                             </div>
@@ -75,5 +75,5 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default Jobs;
 

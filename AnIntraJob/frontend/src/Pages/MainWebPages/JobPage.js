@@ -1,12 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import Blog from '../../Components/MainWebComponents/Blog'
+import Job from '../../Components/MainWebComponents/Job'
 
 
 const BlogPage = () => {
 
     return (
-        <Blog />
+        <Job />
     )
 }
 

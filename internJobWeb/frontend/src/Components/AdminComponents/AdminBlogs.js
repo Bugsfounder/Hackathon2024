@@ -74,7 +74,7 @@ const AdminBlogs = () => {
         next={getBlogs}
         hasMore={hasMore}
         loader={<h4 className='text-center font-bold'>Loading...</h4>}
-        endMessage={<p className="text-center font-bold">No more blogs</p>}
+        endMessage={<p className="text-center font-bold">No more Jobs</p>}
       >
         <div className="blogSection p-3">
           {blogs.map(blog => (

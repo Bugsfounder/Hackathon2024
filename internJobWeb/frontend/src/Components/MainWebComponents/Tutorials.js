@@ -45,13 +45,13 @@ const Tutorials = () => {
         <div className="p-6  h-screen container m-auto ">
             <div className='mx-5'>
 
-                <h1 className="text-2xl font-semibold">Tutorials</h1>
+                <h1 className="text-2xl font-semibold">Courses</h1>
                 <InfiniteScroll
                     dataLength={tutorials.length}
                     next={getTutorials}
                     hasMore={hasMore}
                     loader={<h4 className='text-center font-bold'>Loading...</h4>}
-                    endMessage={<p className="text-center font-bold">No more tutorials</p>}
+                    endMessage={<p className="text-center font-bold">No more internship</p>}
                 >
                     <div className="tutorialSection py-3">
                         {tutorials.map(tutorial => (

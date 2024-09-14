@@ -86,17 +86,17 @@ const Navbar = (props) => {
                             <ul className='space-y-2 md:flex md:space-y-0 md:space-x-8 text-bold'>
                                 <li></li>
                                 <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/">Home </Link></li>
-                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/blogs">Blogs</Link></li>
-                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/tutorials">Tutorials</Link></li>
-                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/about_me">About </Link></li>
-                                <li></li>
+                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/blogs">Jobs</Link></li>
+                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/about_me">Internship</Link></li>
+                                <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/tutorials">Courses</Link></li>
+                                {/* <li><Link className="hover:underline dark:hover:text-slate-400 md:text-lg" to="/tutorials">Courses</Link></li> */}
                             </ul>
                         </div>
                     </div>
 
                     <div className="logo md:order-1 ">
                         {/* <Link to="/"><img src={NavLogo} id="aboutLogo" alt="Loading..." className='rounded-full w-14 h-14' /></Link> */}
-                        <Link to="/"><span className='font-extrabold text-xl' id="aboutLogo"> <span className='dark:text-white text-gray-400'>Bugs</span><span className='text-sky-600'>Founder</span></span></Link>
+                        <Link to="/"><span className='font-extrabold text-xl' id="aboutLogo"> <span className='dark:text-white text-gray-400'>Aspire</span><span className='text-sky-600'>Link</span></span></Link>
                     </div>
 
                     <form className="search flex md:shadow-sm justify-center items-center md:order-3 " onSubmit={OnPressEnter}>
